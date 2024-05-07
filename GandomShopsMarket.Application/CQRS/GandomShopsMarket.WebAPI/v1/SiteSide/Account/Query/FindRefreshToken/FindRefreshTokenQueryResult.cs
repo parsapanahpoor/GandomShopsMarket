@@ -1,4 +1,4 @@
-﻿namespace TokenBased_Authentication.Application.CQRS.APIClient.v1.Account.Query.FindRefreshToken;
+﻿namespace GandomShopsMarket.Application.CQRS.APIClient.v1.Account.Query.FindRefreshToken;
 
 public record FindRefreshTokenQueryResult
 {

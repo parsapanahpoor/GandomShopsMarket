@@ -1,6 +1,6 @@
-﻿using TokenBased_Authentication.Application.StaticTools;
-using TokenBased_Authentication.Domain.DTO.AdminSide.User;
-using TokenBased_Authentication.Domain.IRepositories.User;
+﻿using GandomShopsMarket.Application.StaticTools;
+using GandomShopsMarket.Domain.DTO.AdminSide.User;
+using GandomShopsMarket.Domain.IRepositories.User;
 
 namespace TokenBased_Authentication.Application.CQRS.APIClient.v1.AdminSide.User.Query.UserDetailQuery;
 

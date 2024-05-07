@@ -1,13 +1,13 @@
 ﻿using System.Reflection;
 using System.Security.Claims;
 using System.Text;
-using TokenBased_Authentication.Application.Common.IUnitOfWork;
-using TokenBased_Authentication.Application.Utilities.Security;
-using TokenBased_Authentication.Domain.DTO.APIClient.Account;
-using TokenBased_Authentication.Domain.Entities.Account;
-using TokenBased_Authentication.Domain.IRepositories.User;
+using GandomShopsMarket.Application.Common.IUnitOfWork;
+using GandomShopsMarket.Application.Utilities.Security;
+using GandomShopsMarket.Domain.DTO.APIClient.Account;
+using GandomShopsMarket.Domain.Entities.Account;
+using GandomShopsMarket.Domain.IRepositories.User;
 
-namespace TokenBased_Authentication.Application.CQRS.APIClient.v1.Account.Command.CreateToken;
+namespace GandomShopsMarket.Application.CQRS.APIClient.v1.Account.Command.CreateToken;
 
 public record CreateTokenCommandHandler : IRequestHandler<CreateTokenCommand, LoginDataDto>
 {

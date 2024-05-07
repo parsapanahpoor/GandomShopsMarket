@@ -1,6 +1,6 @@
-﻿using TokenBased_Authentication.Domain.DTO.APIClient.Account;
+﻿using GandomShopsMarket.Domain.DTO.APIClient.Account;
 
-namespace TokenBased_Authentication.Application.CQRS.APIClient.v1.Account.Query.Login;
+namespace GandomShopsMarket.Application.CQRS.APIClient.v1.Account.Query.Login;
 
 public record LoginQuery : IRequest<SMSCodeInsertedResultDTO>
 {

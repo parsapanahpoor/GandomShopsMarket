@@ -1,7 +1,7 @@
-﻿using TokenBased_Authentication.Domain.Entities.Account;
-using TokenBased_Authentication.Domain.IRepositories.User;
+﻿using GandomShopsMarket.Domain.Entities.Account;
+using GandomShopsMarket.Domain.IRepositories.User;
 
-namespace TokenBased_Authentication.Application.CQRS.APIClient.v1.Account.Query.CreateToken;
+namespace GandomShopsMarket.Application.CQRS.APIClient.v1.Account.Query.CreateToken;
 
 public record CreateTokenQueryHandler : IRequestHandler<CreateTokenQuery, User>
 {

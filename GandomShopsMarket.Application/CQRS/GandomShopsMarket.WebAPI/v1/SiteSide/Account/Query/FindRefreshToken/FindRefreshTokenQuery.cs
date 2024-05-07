@@ -1,5 +1,5 @@
-﻿using TokenBased_Authentication.Domain.Entities.Account;
-namespace TokenBased_Authentication.Application.CQRS.APIClient.v1.Account.Query.FindRefreshToken;
+﻿using GandomShopsMarket.Domain.Entities.Account;
+namespace GandomShopsMarket.Application.CQRS.APIClient.v1.Account.Query.FindRefreshToken;
 
 public record FindRefreshTokenQuery : IRequest<FindRefreshTokenQueryResult>
 {

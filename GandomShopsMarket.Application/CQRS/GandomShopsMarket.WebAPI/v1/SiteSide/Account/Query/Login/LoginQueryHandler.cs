@@ -1,8 +1,8 @@
-﻿using TokenBased_Authentication.Application.Common.IUnitOfWork;
-using TokenBased_Authentication.Domain.DTO.APIClient.Account;
-using TokenBased_Authentication.Domain.IRepositories.User;
+﻿using GandomShopsMarket.Application.Common.IUnitOfWork;
+using GandomShopsMarket.Domain.DTO.APIClient.Account;
+using GandomShopsMarket.Domain.IRepositories.User;
 
-namespace TokenBased_Authentication.Application.CQRS.APIClient.v1.Account.Query.Login;
+namespace GandomShopsMarket.Application.CQRS.APIClient.v1.Account.Query.Login;
 
 public record LoginQueryHandler : IRequestHandler<LoginQuery, SMSCodeInsertedResultDTO>
 {
