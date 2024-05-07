@@ -1,4 +1,3 @@
-
 namespace GandomShopsMarket.WebAPI
 {
     public class Program
