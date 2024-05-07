@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3050148C-0F02-42FE-B28B-6EE4040A6DF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A667AEF2-6E2B-4AA4-BF0F-8546678E2DDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrustruct", "Infrustruct", "{9A46D8C6-33B1-471F-9218-3AB443FBFD05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0D7ED597-3D76-4C58-AB86-B0A3CF0136CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{6CD5994A-DC80-477E-8A8F-975AF9E8757F}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A46D8C6-33B1-471F-9218-3AB443FBFD05} = {3050148C-0F02-42FE-B28B-6EE4040A6DF8}
+		{0D7ED597-3D76-4C58-AB86-B0A3CF0136CD} = {3050148C-0F02-42FE-B28B-6EE4040A6DF8}
+		{6CD5994A-DC80-477E-8A8F-975AF9E8757F} = {3050148C-0F02-42FE-B28B-6EE4040A6DF8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F253023B-D357-4406-A529-E444AE0FBAFF}
+	EndGlobalSection
+EndGlobal
