@@ -2,7 +2,7 @@
 using GandomShopsMarket.Domain.DTO.AdminSide.User;
 using GandomShopsMarket.Domain.IRepositories.User;
 
-namespace TokenBased_Authentication.Application.CQRS.APIClient.v1.AdminSide.User.Query;
+namespace GandomShopsMarket.Application.CQRS.APIClient.v1.AdminSide.User.Query;
 
 public record FilterUsersAdminSideQueryHandler : IRequestHandler<FilterUsersAdminSideQuery, FilterUsersDTO>
 {

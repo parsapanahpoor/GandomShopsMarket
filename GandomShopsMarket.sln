@@ -7,21 +7,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{3050148C-0F0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A667AEF2-6E2B-4AA4-BF0F-8546678E2DDB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrasstructure", "Infrasstructure", "{9A46D8C6-33B1-471F-9218-3AB443FBFD05}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9A46D8C6-33B1-471F-9218-3AB443FBFD05}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0D7ED597-3D76-4C58-AB86-B0A3CF0136CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{6CD5994A-DC80-477E-8A8F-975AF9E8757F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GandomShopsMarket.Domain", "GandomShopsMarket.Domain\GandomShopsMarket.Domain.csproj", "{023B3A36-220C-4157-819A-6FF14A791909}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GandomShopsMarket.Domain", "GandomShopsMarket.Domain\GandomShopsMarket.Domain.csproj", "{023B3A36-220C-4157-819A-6FF14A791909}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GandomShopsMarket.Application", "GandomShopsMarket.Application\GandomShopsMarket.Application.csproj", "{B7F80374-6D0E-40E3-A866-7A1323C58CBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GandomShopsMarket.Application", "GandomShopsMarket.Application\GandomShopsMarket.Application.csproj", "{B7F80374-6D0E-40E3-A866-7A1323C58CBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GandomShopsMarket.Infrastructure", "GandomShopsMarket.Infrastructure\GandomShopsMarket.Infrastructure.csproj", "{7BE7F242-7AA6-45A0-9B97-CE25AD051B10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GandomShopsMarket.Infrastructure", "GandomShopsMarket.Infrastructure\GandomShopsMarket.Infrastructure.csproj", "{7BE7F242-7AA6-45A0-9B97-CE25AD051B10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GandomShopsMarket.IoC", "GandomShopsMarket.IoC\GandomShopsMarket.IoC.csproj", "{FF7BDECE-DF4E-4A42-984A-431949414A13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GandomShopsMarket.IoC", "GandomShopsMarket.IoC\GandomShopsMarket.IoC.csproj", "{FF7BDECE-DF4E-4A42-984A-431949414A13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GandomShopsMarket.WebAPI", "GandomShopsMarket.WebAPI\GandomShopsMarket.WebAPI.csproj", "{6ABDB831-3857-4F0F-AD44-18F45EE67AC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GandomShopsMarket.WebAPI", "GandomShopsMarket.WebAPI\GandomShopsMarket.WebAPI.csproj", "{6ABDB831-3857-4F0F-AD44-18F45EE67AC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

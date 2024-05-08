@@ -4,7 +4,7 @@ using GandomShopsMarket.Application.CQRS.APIClient.v1.AdminSide.User.Command.Edi
 using GandomShopsMarket.Application.CQRS.APIClient.v1.AdminSide.User.Query;
 using GandomShopsMarket.Domain.DTO.AdminSide.User;
 using GandomShopsMarket.Presentation.Areas.Admin.Controllers.v1;
-using TokenBased_Authentication.Application.CQRS.APIClient.v1.AdminSide.User.Query.UserDetailQuery;
+using GandomShopsMarket.Application.CQRS.APIClient.v1.AdminSide.User.Query.UserDetailQuery;
 
 namespace TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1;
 

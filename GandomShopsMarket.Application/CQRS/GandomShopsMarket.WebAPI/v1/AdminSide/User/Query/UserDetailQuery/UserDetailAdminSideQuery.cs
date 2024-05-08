@@ -1,6 +1,6 @@
 ﻿using GandomShopsMarket.Domain.DTO.AdminSide.User;
 
-namespace TokenBased_Authentication.Application.CQRS.APIClient.v1.AdminSide.User.Query.UserDetailQuery;
+namespace GandomShopsMarket.Application.CQRS.APIClient.v1.AdminSide.User.Query.UserDetailQuery;
 
 public record UserDetailAdminSideQuery : IRequest<UserDetailAdminSideDTO>
 {
