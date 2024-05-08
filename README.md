@@ -44,7 +44,3 @@ Create a new Pull Request. 🚀
 License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 📝
-
-Acknowledgements
-
-Special thanks to [Name] for their guidance and support. 🙏
