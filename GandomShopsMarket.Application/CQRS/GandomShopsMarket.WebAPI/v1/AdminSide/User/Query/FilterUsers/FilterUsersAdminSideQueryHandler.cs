@@ -19,10 +19,6 @@ public record FilterUsersAdminSideQueryHandler : IRequestHandler<FilterUsersAdmi
 
     public async Task<FilterUsersDTO> Handle(FilterUsersAdminSideQuery request, CancellationToken cancellationToken)
     {
-        return await _userQueryRepository.FilterUsers(new FilterUsersDTO()
-        {
-            Username = request.Username,
-            Mobile = request.Mobile
-        }, cancellationToken);
+        return await _userQueryRepository.FilterUsers(request.Filter, cancellationToken);
     }
 }

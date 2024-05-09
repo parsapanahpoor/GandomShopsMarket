@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 using GandomShopsMarket.Application.CQRS.APIClient.v1.Account.Command.LogOut;
 using GandomShopsMarket.Application.Utilities.Extensions;
 using GandomShopsMarket.Presentation.HttpManager;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace GandomShopsMarket.Presentation.Controllers.v1;
 
@@ -38,9 +39,7 @@ public class AccountController : SiteBaseController
     /// ارسال کدفعال سازی یک بار مصرف جهت ورود کاربر با این کد
     /// </summary>
     /// <param name="phoneNumber">شماره موبایل</param>
-    /// <param name="cancellationToken"></param>
-    /// <returns></returns>
-    
+
     [HttpPost("SendSMSCode")]
     public async Task<IActionResult> SendSMSCode(string phoneNumber,
                                                  CancellationToken cancellationToken)
@@ -57,6 +56,10 @@ public class AccountController : SiteBaseController
     #endregion
 
     #region Register Or Login 
+
+    /// <summary>
+    /// پرتابل مشترک برای ورود و ثبت نام از طریق دریافت پیامک یکبار مصرف در مرحله ی قبل
+    /// </summary>
 
     [HttpPost("Login_Register")]
     public async Task<IActionResult> Login_Register([FromBody] LoginQuery query,
@@ -84,6 +87,10 @@ public class AccountController : SiteBaseController
     #endregion
 
     #region Refresh Token
+
+    /// <summary>
+    /// بازیابی توکن از طریق رفرش توکن
+    /// </summary>
 
     [HttpPost("RefreshToken")]
     public async Task<IActionResult> RefreshToken(string Refreshtoken,
@@ -160,6 +167,10 @@ public class AccountController : SiteBaseController
     #endregion
 
     #region Log Out
+
+    /// <summary>
+    /// متود خروج
+    /// </summary>
 
     [Authorize]
     [HttpGet("Logout")]

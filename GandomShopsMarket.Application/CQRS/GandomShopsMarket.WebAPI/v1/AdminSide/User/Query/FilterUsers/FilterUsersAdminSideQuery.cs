@@ -6,9 +6,7 @@ public record FilterUsersAdminSideQuery : IRequest<FilterUsersDTO>
 {
     #region properties
 
-    public string? Username { get; set; }
-
-    public string? Mobile { get; set; }
+    public FilterUsersDTO Filter { get; set; }
 
     #endregion
 }
