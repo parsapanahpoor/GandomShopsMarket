@@ -5,6 +5,7 @@ using GandomShopsMarket.Application.CQRS.APIClient.v1.AdminSide.User.Query;
 using GandomShopsMarket.Domain.DTO.AdminSide.User;
 using GandomShopsMarket.Presentation.Areas.Admin.Controllers.v1;
 using GandomShopsMarket.Application.CQRS.APIClient.v1.AdminSide.User.Query.UserDetailQuery;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1;
 
@@ -14,6 +15,10 @@ namespace TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1;
 public class UserController : AdminBaseController
 {
     #region Filter Users 
+
+    /// <summary>
+    /// لیست کاربران
+    /// </summary>
 
     [HttpGet("FilterUsers")]
     public async Task<IActionResult> FilterUsers([FromQuery] FilterUsersAdminSideQuery filter,
@@ -25,6 +30,10 @@ public class UserController : AdminBaseController
     #endregion
 
     #region Edit User
+
+    /// <summary>
+    /// ویرایش یک کاربر
+    /// </summary>
 
     [HttpPut("EditUser")]
     public async Task<IActionResult> EditUser([FromForm]EditUserDTO userDTO,
@@ -55,6 +64,10 @@ public class UserController : AdminBaseController
     #endregion
 
     #region Show User Detail
+
+    /// <summary>
+    /// نمایش اطلاعات یک کاربر
+    /// </summary>
 
     [HttpGet("UserDetail")]
     public async Task<IActionResult> UserDetail([FromQuery]UserDetailAdminSideQuery query,

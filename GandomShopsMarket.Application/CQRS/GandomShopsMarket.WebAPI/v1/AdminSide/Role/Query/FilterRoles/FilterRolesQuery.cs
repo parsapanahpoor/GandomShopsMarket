@@ -6,7 +6,7 @@ public class FilterRolesQuery : IRequest<FilterRolesDTO>
 {
     #region properties
 
-    public string? RoleTitle { get; set; }
+    public FilterRolesDTO FilterRolesDTO { get; set; }
 
     #endregion
 }

@@ -5,6 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
 	  <InvariantGlobalization>false</InvariantGlobalization>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <DocumentationFile>D:\Task\BackEnd\GandomShopMarket\BackEnd\CurrentVersion\ShopsMarket\GandomShopsMarket.WebAPI\GandomShopsMarket.WebAPI.xml</DocumentationFile>
   </PropertyGroup>
 
 	<ItemGroup>
@@ -20,6 +22,7 @@
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.4" NoWarn="NU1605" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -33,7 +36,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Include="bin\Debug\net8.0\GandomShopsMarket.xml" />
+	  <None Include="bin\Debug\net8.0\GandomShopsMarket.WebAPI.xml" />
 	</ItemGroup>
 
 </Project>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GandomShopsMarket.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:GandomShopsMarket.Presentation.Areas.Admin.Controllers.v1.HomeController.AdminDashboard(System.Threading.CancellationToken)">
+            <summary>
+            داشبورد پنل ادمین
+            </summary>
+        </member>
+        <member name="M:GandomShopsMarket.Presentation.Controllers.v1.AccountController.SendSMSCode(System.String,System.Threading.CancellationToken)">
+            <summary>
+            ارسال کدفعال سازی یک بار مصرف جهت ورود کاربر با این کد
+            </summary>
+            <param name="phoneNumber">شماره موبایل</param>
+        </member>
+        <member name="M:GandomShopsMarket.Presentation.Controllers.v1.AccountController.Login_Register(GandomShopsMarket.Application.CQRS.APIClient.v1.Account.Query.Login.LoginQuery,System.Threading.CancellationToken)">
+            <summary>
+            پرتابل مشترک برای ورود و ثبت نام از طریق دریافت پیامک یکبار مصرف در مرحله ی قبل
+            </summary>
+        </member>
+        <member name="M:GandomShopsMarket.Presentation.Controllers.v1.AccountController.RefreshToken(System.String,System.Threading.CancellationToken)">
+            <summary>
+            بازیابی توکن از طریق رفرش توکن
+            </summary>
+        </member>
+        <member name="M:GandomShopsMarket.Presentation.Controllers.v1.AccountController.Logout(System.Threading.CancellationToken)">
+            <summary>
+            متود خروج
+            </summary>
+        </member>
+        <member name="M:TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1.RoleController.FilterRoles(GandomShopsMarket.Domain.DTO.AdminSide.Role.FilterRolesDTO,System.Threading.CancellationToken)">
+            <summary>
+            لیست نقش های سامانه
+            </summary>
+        </member>
+        <member name="M:TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1.RoleController.CreateRole(GandomShopsMarket.Domain.DTO.AdminSide.Role.CreateRoleDTO,System.Threading.CancellationToken)">
+            <summary>
+            افزودن نقش جدید
+            </summary>
+        </member>
+        <member name="M:TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1.RoleController.EditRole(GandomShopsMarket.Domain.DTO.AdminSide.Role.EditRoleDTO,System.Threading.CancellationToken)">
+            <summary>
+            ویرایش نقش ها
+            </summary>
+        </member>
+        <member name="M:TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1.RoleController.RoleDetail(System.UInt64,System.Threading.CancellationToken)">
+            <summary>
+            جزئیات یک نقش
+            </summary>
+        </member>
+        <member name="M:TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1.RoleController.DeleteRole(System.UInt64,System.Threading.CancellationToken)">
+            <summary>
+            حذف یک نقش
+            </summary>
+        </member>
+        <member name="M:TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1.UserController.FilterUsers(GandomShopsMarket.Application.CQRS.APIClient.v1.AdminSide.User.Query.FilterUsersAdminSideQuery,System.Threading.CancellationToken)">
+            <summary>
+            لیست کاربران
+            </summary>
+        </member>
+        <member name="M:TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1.UserController.EditUser(GandomShopsMarket.Domain.DTO.AdminSide.User.EditUserDTO,System.Threading.CancellationToken)">
+            <summary>
+            ویرایش یک کاربر
+            </summary>
+        </member>
+        <member name="M:TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1.UserController.UserDetail(GandomShopsMarket.Application.CQRS.APIClient.v1.AdminSide.User.Query.UserDetailQuery.UserDetailAdminSideQuery,System.Threading.CancellationToken)">
+            <summary>
+            نمایش اطلاعات یک کاربر
+            </summary>
+        </member>
+    </members>
+</doc>

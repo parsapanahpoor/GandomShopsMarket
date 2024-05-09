@@ -18,11 +18,6 @@ public record FilterRolesQueryHandler : IRequestHandler<FilterRolesQuery, Filter
 
     public async Task<FilterRolesDTO> Handle(FilterRolesQuery request, CancellationToken cancellationToken)
     {
-        return await _roleQueryRepository.FilterRoles(new FilterRolesDTO()
-        {
-            RoleTitle = request.RoleTitle,
-        },
-        cancellationToken
-        );
+        return await _roleQueryRepository.FilterRoles(request.FilterRolesDTO,cancellationToken);
     }
 }

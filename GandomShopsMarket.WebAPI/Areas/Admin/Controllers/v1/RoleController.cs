@@ -9,6 +9,7 @@ using GandomShopsMarket.Application.CQRS.GandomShopsMarket.WebAPI.v1.AdminSide.R
 using GandomShopsMarket.Application.CQRS.GandomShopsMarket.WebAPI.v1.AdminSide.Role.Command.EditRole;
 using GandomShopsMarket.Application.CQRS.GandomShopsMarket.WebAPI.v1.AdminSide.Role.Query.EditRole;
 using GandomShopsMarket.Application.CQRS.GandomShopsMarket.WebAPI.v1.AdminSide.Role.Command.DeleteRole;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace TokenBased_Authentication.Presentation.Areas.Admin.Controllers.v1;
 
@@ -19,14 +20,15 @@ public class RoleController : AdminBaseController
 {
     #region Filter Roles
 
+    /// <summary>
+    /// لیست نقش های سامانه
+    /// </summary>
+
     [HttpGet("FilterRoles")]
-    public async Task<IActionResult> FilterRoles(string? RoleTitle,
+    public async Task<IActionResult> FilterRoles([FromQuery]FilterRolesDTO filter,
                                                  CancellationToken cancellation = default)
     {
-        var res = await Mediator.Send(new FilterRolesQuery()
-        {
-            RoleTitle = RoleTitle
-        }, cancellation);
+        var res = await Mediator.Send(filter , cancellation);
 
         return Ok(JsonResponseStatus.Success(res));
     }
@@ -34,6 +36,10 @@ public class RoleController : AdminBaseController
     #endregion
 
     #region Create Role 
+
+    /// <summary>
+    /// افزودن نقش جدید
+    /// </summary>
 
     [HttpPost("CreateRole")]
     public async Task<IActionResult> CreateRole([FromBody] CreateRoleDTO model,
@@ -57,6 +63,10 @@ public class RoleController : AdminBaseController
     #endregion
 
     #region Edit Role 
+
+    /// <summary>
+    /// ویرایش نقش ها
+    /// </summary>
 
     [HttpPut("EditRole")]
     public async Task<IActionResult> EditRole([FromBody] EditRoleDTO model,
@@ -89,6 +99,10 @@ public class RoleController : AdminBaseController
 
     #region Role Detail
 
+    /// <summary>
+    /// جزئیات یک نقش
+    /// </summary>
+
     [HttpGet("RoleDetail")]
     public async Task<IActionResult> RoleDetail([FromQuery]ulong roleId,
                                                 CancellationToken cancellation)
@@ -102,6 +116,10 @@ public class RoleController : AdminBaseController
     #endregion
 
     #region Delete Role 
+
+    /// <summary>
+    /// حذف یک نقش
+    /// </summary>
 
     [HttpDelete("DeleteRole")]
     public async Task<IActionResult> DeleteRole([FromQuery]ulong roleId,

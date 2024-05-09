@@ -11,6 +11,7 @@ using GandomShopsMarket.Application;
 using GandomShopsMarket.Presentation.TokenValidator;
 using GandomShopsMarket.IoC;
 using GandomShopsMarket.Infrastructure.ApplicationDbContext;
+using Microsoft.AspNetCore.Mvc.Abstractions;
 
 namespace GandomShopsMarket.WebAPI
 {
@@ -64,10 +65,26 @@ namespace GandomShopsMarket.WebAPI
 
             builder.Services.AddSwaggerGen(c =>
             {
-                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "GandomShopsMarket.xml"), true);
-
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "GandomShopsMarket", Version = "v1" });
                 c.SwaggerDoc("v2", new OpenApiInfo { Title = "GandomShopsMarket", Version = "v2" });
+
+                // برای نمایش سامری ها و داکیومنتیشن
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+
+                // Configure Swagger to use tags for grouping
+                //c.TagActionsBy(api => new List<string> { (api.ActionDescriptor.RouteValues["controller"].StartsWith("Admin") ? "Admin Panel Side" : "Site Side") });
+
+                c.TagActionsBy(api =>
+                {
+                    // Extract area name from route values
+                    var areaName = GetAreaNameFromRouteValues(api.ActionDescriptor);
+                    var controllerName = api.ActionDescriptor.RouteValues["controller"];
+
+                    // Use area name and controller name for tagging
+                    return new List<string> { areaName };
+                });
 
                 c.DocInclusionPredicate((doc, apiDescription) =>
                 {
@@ -136,7 +153,8 @@ namespace GandomShopsMarket.WebAPI
                 {
                     OnAuthenticationFailed = context => { return Task.CompletedTask; },
 
-                    OnTokenValidated = context => {
+                    OnTokenValidated = context =>
+                    {
                         //log
                         var tokenValidatorService = context.HttpContext.RequestServices.GetRequiredService<ITokenValidator>();
                         return tokenValidatorService.Execute(context);
@@ -168,6 +186,8 @@ namespace GandomShopsMarket.WebAPI
                 {
                     options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
                     options.SwaggerEndpoint("/swagger/v2/swagger.json", "v2");
+                    options.RoutePrefix = "swagger";
+                    //options.AddHierarchySupport();
                 });
             }
 
@@ -185,9 +205,32 @@ namespace GandomShopsMarket.WebAPI
 
             app.MapControllers();
 
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                  name: "areas",
+                  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
+            });
+
             app.Run();
 
             #endregion
+        }
+
+        private static string GetAreaNameFromRouteValues(ActionDescriptor actionDescriptor)
+        {
+            // Attempt to extract the area name from route values
+            if (actionDescriptor.RouteValues.TryGetValue("area", out var areaName))
+            {
+                if (!string.IsNullOrEmpty(areaName))
+                {
+                    return areaName;
+                }
+            }
+
+            // Default to "Site" if area is not specified
+            return "Site Side";
         }
     }
 
